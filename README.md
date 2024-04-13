@@ -109,10 +109,6 @@ Continue until $i = k$. Then $k - i = 0$ and $T(13^{k-i}) = T(1) = 1 \$.
 
 $T(13^k) = 13^k + \frac{{13^k - 1}}{6}$
 
-Express $T(n)$ in terms of $n$:
-
-$T(n) = n + \frac{{n - 1}}{6}$
-
 Drop low order terms and constants:
 
 $T(n)$ is $\Theta(n)$.
