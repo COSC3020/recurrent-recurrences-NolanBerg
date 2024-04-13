@@ -15,6 +15,9 @@ Input decreases by 13 every time we recurse. Input size is $n = 13^k$, $k$ = num
 
 Substitute $n = 13^k$:
 
+$T(13^k) = T(13^{k-1}) + 5$
+
+
 
 2.
 $$ T(n) =
