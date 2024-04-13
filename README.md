@@ -17,6 +17,7 @@ Substitute $n = 13^k$:
 
 $T(13^k) = T(13^{k-1}) + 5$
 
+Expand recursively:
 
 
 2.
