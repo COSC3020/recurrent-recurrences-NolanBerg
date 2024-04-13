@@ -63,6 +63,7 @@ $13^0 + 13^1 + \ldots + 13^{i-1} = \frac{{13^i - 1}}{{13 - 1}} = \frac{{13^i - 1
 
 Substitute back into $T(13^k)$ expression:
 
+Continue until $i = k$. Then $k - i = 0$ and $T(13^{k-i}) = T(1) = 1 \$.
 
 
 3.
