@@ -31,7 +31,7 @@ $T(n) = 1 + 5\log_{13}(n)$
 
 Drop low order terms and constants:
 
-$T(n)$ is $\Theta(\log_{13}(n)$
+$T(n)$ is $\Theta(\log_{13}(n))$
 
 
 
@@ -53,6 +53,15 @@ Expand recursively:
 
 $T(13^k) = 13^2 T(13^{k-2}) + 13 \cdot 5 + 5 = 13^3 T(13^{k-3}) + 13^2 \cdot 5 + 13 \cdot 5 + 5 = \ldots$
 
+After $i$ iterations:
+
+$T(13^k) = 13^i T(13^{k-i}) + 5 \left(13^0 + 13^1 + \ldots + 13^{i-1}\right)$
+
+Use the sum of geometric series with ratio $r$ from $0$ to $n - 1$:
+
+$13^0 + 13^1 + \ldots + 13^{i-1} = \frac{{13^i - 1}}{{13 - 1}} = \frac{{13^i - 1}}{12}$
+
+Substitute back into $T(13^k)$ expression:
 
 
 
