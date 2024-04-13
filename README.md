@@ -31,7 +31,7 @@ $T(1)$ is the base case, $T(n) = 1$ for $( n \leq 1 \)$
 
 Drop low order terms and constants:
 
-$T(n) \)$ is $\( \Theta(\log_{13}(n))$
+$T(n)$ is $\Theta(\log_{13}(n)$
 
 
 
