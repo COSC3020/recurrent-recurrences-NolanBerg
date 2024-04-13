@@ -21,6 +21,10 @@ Expand recursively:
 
 $T(13^k) = T(13^{k-2}) + 10 = T(13^{k-3}) + 15 = \ldots = T(1) + 5k$
 
+Drop the lower-order terms and constants:
+
+ $T(n) \) is \( \Theta(\log_{13}(n))$
+
 
 
 2.
