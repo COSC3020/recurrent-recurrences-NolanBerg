@@ -63,8 +63,15 @@ $13^0 + 13^1 + \ldots + 13^{i-1} = \frac{{13^i - 1}}{{13 - 1}} = \frac{{13^i - 1
 
 Substitute back into $T(13^k)$ expression:
 
+$T(13^k) = 13^i T(13^{k-i}) + \frac{{5(13^i - 1)}}{12}$
+
 Continue until $i = k$. Then $k - i = 0$ and $T(13^{k-i}) = T(1) = 1 \$.
 
+$T(13^k) = 13^k + \frac{{5(13^k - 1)}}{12}$
+
+Drop low order terms and constants:
+
+$T(n)$ is $\Theta(n)$.
 
 3.
 $$ T(n) =
