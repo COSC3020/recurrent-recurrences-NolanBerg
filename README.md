@@ -13,6 +13,9 @@ $$
 
 Input decreases by 13 every time we recurse. Input size is $n = 13^k$, $k$ = number of recursions. Then $k = \log_{13}(n)$. 
 
+Substitute $n = 13^k$:
+
+
 2.
 $$ T(n) =
     \begin{cases}
