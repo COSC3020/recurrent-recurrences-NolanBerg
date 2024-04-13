@@ -11,6 +11,8 @@ $$ T(n) =
     \end{cases}
 $$
 
+Input decreases by 13 every time we recurse. Input size is $\n = 13^k$, where $k$ = number of recursions. Then $\k = \log_{13}(n)$. 
+
 2.
 $$ T(n) =
     \begin{cases}
