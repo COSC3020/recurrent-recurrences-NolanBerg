@@ -94,3 +94,9 @@ $T(13^k) = 13^2 T(13^{k-2}) + 2 \cdot 13^{k-1} + 2 \cdot 13^k = 13^3 T(13^{k-3})
 After $i$ iterations:
 
 $T(13^k) = 13^i T(13^{k-i}) + 2 \left(13^0 + 13^1 + \ldots + 13^{i-1}\right) \cdot 13^k$
+
+Use the sum of geometric series with ratio $r$ from $0$ to $n - 1$:
+
+$13^0 + 13^1 + \ldots + 13^{i-1} = \frac{{13^i - 1}}{{13 - 1}} = \frac{{13^i - 1}}{12}$
+
+Substitute back into $T(13^k)$ expression:
