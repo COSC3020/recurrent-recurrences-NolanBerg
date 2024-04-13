@@ -100,3 +100,17 @@ Use the sum of geometric series with ratio $r$ from $0$ to $n - 1$:
 $13^0 + 13^1 + \ldots + 13^{i-1} = \frac{{13^i - 1}}{{13 - 1}} = \frac{{13^i - 1}}{12}$
 
 Substitute back into $T(13^k)$ expression:
+
+$T(13^k) = 13^i T(13^{k-i}) + 2 \cdot \frac{{13^i - 1}}{12} \cdot 13^k$
+
+Continue until $i = k$. Then $k - i = 0$ and $T(13^{k-i}) = T(1) = 1 \$.
+
+$T(13^k) = 13^k + \frac{{13^k - 1}}{6}$
+
+Express $T(n)$ in terms of $n$:
+
+$T(n) = n + \frac{{n - 1}}{6}$
+
+Drop low order terms and constants:
+
+$T(n)$ is $\Theta(n)$.
