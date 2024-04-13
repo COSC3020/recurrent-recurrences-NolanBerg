@@ -80,3 +80,17 @@ $$ T(n) =
         13 T\left(\frac{n}{13}\right) + 2n & n > 1
     \end{cases}
 $$
+
+Input decreases by 13 every time we recurse. Input size is $n = 13^k$, $k$ = number of recursions. Then $k = \log_{13}(n)$.
+
+Substitute $n = 13^k$:
+
+$T(13^k) = 13 T(13^{k-1}) + 2 \cdot 13^k$
+
+Expand recursively:
+
+$T(13^k) = 13^2 T(13^{k-2}) + 2 \cdot 13^{k-1} + 2 \cdot 13^k = 13^3 T(13^{k-3}) + 2 \cdot 13^{k-2} + 2 \cdot 13^{k-1} + 2 \cdot 13^k = \ldots $
+
+After $i$ iterations:
+
+$T(13^k) = 13^i T(13^{k-i}) + 2 \left(13^0 + 13^1 + \ldots + 13^{i-1}\right) \cdot 13^k$
