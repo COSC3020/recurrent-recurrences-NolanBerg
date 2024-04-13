@@ -23,11 +23,11 @@ $T(13^k) = T(13^{k-2}) + 10 = T(13^{k-3}) + 15 = \ldots = T(1) + 5k$
 
 $T(1)$ is the base case, $T(n) = 1$ for $( n \leq 1 \)$
 
- $T(n) = 1 + 5k$
+$T(n) = 1 + 5k$
 
- Substitute: $k = \log_{13}(n)$:
+Substitute: $k = \log_{13}(n)$:
 
- $T(n) = 1 + 5\log_{13}(n)$
+$T(n) = 1 + 5\log_{13}(n)$
 
 Drop low order terms and constants:
 
@@ -42,6 +42,19 @@ $$ T(n) =
         13 T\left(\frac{n}{13}\right) + 5 & n > 1
     \end{cases}
 $$
+
+Input decreases by 13 every time we recurse. Input size is $n = 13^k$, $k$ = number of recursions. Then $k = \log_{13}(n)$.
+
+Substitute $n = 13^k$:
+
+$T(13^k) = 13 T(13^{k-1}) + 5$
+
+Expand recursively:
+
+$T(13^k) = 13^2 T(13^{k-2}) + 13 \cdot 5 + 5 = 13^3 T(13^{k-3}) + 13^2 \cdot 5 + 13 \cdot 5 + 5 = \ldots$
+
+
+
 
 3.
 $$ T(n) =
