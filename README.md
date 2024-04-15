@@ -90,3 +90,5 @@ Total work done is the sum of the work done at each level of recursion. Lets exp
 $T(n) = 2n + 2 \times \frac{n}{13} + 2 \times \frac{n}{13^2} + \ldots + 2 \times \frac{n}{13^{\log_{13}(n)}}$
 
 Sum inside parentheses is geometric series $a = 1$ and $r = \frac{1}{13}$. Sum of series:
+
+$\frac{1 - (\frac{1}{13})^{\log_{13}(n)}}{1 - \frac{1}{13}} = \frac{1 - \frac{1}{n}}{\frac{12}{13}} = \frac{13}{12} \left(1 - \frac{1}{n}\right)$
