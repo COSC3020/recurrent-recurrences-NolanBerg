@@ -92,3 +92,7 @@ $T(n) = 2n + 2 \times \frac{n}{13} + 2 \times \frac{n}{13^2} + \ldots + 2 \times
 Sum inside parentheses is geometric series $a = 1$ and $r = \frac{1}{13}$. Sum of series:
 
 $\frac{1 - (\frac{1}{13})^{\log_{13}(n)}}{1 - \frac{1}{13}} = \frac{1 - \frac{1}{n}}{\frac{12}{13}} = \frac{13}{12} \left(1 - \frac{1}{n}\right)$
+
+Substituting sum back into $T(n)$t:
+
+$T(n) = 2n \times \frac{13}{12} \left(1 - \frac{1}{n}\right) = \frac{13}{6}n - \frac{13}{12}$
