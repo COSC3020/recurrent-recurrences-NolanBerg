@@ -96,3 +96,7 @@ $\frac{1 - (\frac{1}{13})^{\log_{13}(n)}}{1 - \frac{1}{13}} = \frac{1 - \frac{1}
 Substituting sum back into $T(n)$:
 
 $T(n) = 2n \times \frac{13}{12} \left(1 - \frac{1}{n}\right) = \frac{13}{6}n - \frac{13}{12}$
+
+Drop low order terms and constants:
+
+$T(n)$ is $\Theta(n \log_{13}(n))$
