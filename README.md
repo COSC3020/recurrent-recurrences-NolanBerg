@@ -83,20 +83,10 @@ $$ T(n) =
     \end{cases}
 $$
 
-Input decreases by 13 every time we recurse. Work done outside of recursion is 2n.
+$T(n) = 13T\left(\frac{n}{13}\right) + 2n$
 
-Total work done is the sum of the work done at each level of recursion. Lets express this:
+Expand Recursively:
 
-$T(n) = 2n + 2 \times \frac{n}{13} + 2 \times \frac{n}{13^2} + \ldots + 2 \times \frac{n}{13^{\log_{13}(n)}}$
+$T(n) = 13^2T\left(\frac{n}{13^2}\right) + 13 \times 2\left(\frac{n}{13}\right) + 2n = 13^3T\left(\frac{n}{13^3}\right) + 13^2 \times 2\left(\frac{n}{13^2}\right) + 13 \times 2\left(\frac{n}{13}\right) + 2n = \ldots$
 
-Sum inside parentheses is geometric series $a = 1$ and $r = \frac{1}{13}$. Sum of series:
-
-$\frac{1 - (\frac{1}{13})^{\log_{13}(n)}}{1 - \frac{1}{13}} = \frac{1 - \frac{1}{n}}{\frac{12}{13}} = \frac{13}{12} \left(1 - \frac{1}{n}\right)$
-
-Substituting sum back into $T(n)$:
-
-$T(n) = 2n \times \frac{13}{12} \left(1 - \frac{1}{n}\right) = \frac{13}{6}n - \frac{13}{12}$
-
-Drop low order terms and constants:
-
-$T(n)$ is $\Theta(n \log_{13}(n))$
+After $i$ iterations:
