@@ -90,3 +90,10 @@ Expand Recursively:
 $T(n) = 13^2T\left(\frac{n}{13^2}\right) + 13 \times 2\left(\frac{n}{13}\right) + 2n = 13^3T\left(\frac{n}{13^3}\right) + 13^2 \times 2\left(\frac{n}{13^2}\right) + 13 \times 2\left(\frac{n}{13}\right) + 2n = \ldots$
 
 After $i$ iterations:
+
+$T(n) = 13^iT\left(\frac{n}{13^i}\right) + 2n \times \sum_{k=0}^{i-1}13^k$
+
+when $i$ $\frac{n}{13^i} = 1$: 
+
+$\frac{n}{13^i} = 1 \Rightarrow n = 13^i \Rightarrow i = \log_{13}(n)$
+
