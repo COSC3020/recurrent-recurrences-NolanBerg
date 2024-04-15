@@ -93,7 +93,19 @@ After $i$ iterations:
 
 $T(n) = 13^iT\left(\frac{n}{13^i}\right) + 2n \times \sum_{k=0}^{i-1}13^k$
 
-when $i$ $\frac{n}{13^i} = 1$: 
+When $i$ $\frac{n}{13^i} = 1$: 
 
 $\frac{n}{13^i} = 1 \Rightarrow n = 13^i \Rightarrow i = \log_{13}(n)$
+
+Substitute $i = \log_{13}(n)$ into $T(n)$:
+
+$T(n) = 13^{\log_{13}(n)}T(1) + 2n \times \sum_{k=0}^{\log_{13}(n)-1}13^k$
+
+$T(n) = nT(1) + 2n \times \sum_{k=0}^{\log_{13}(n)-1}13^k$
+
+$T(n) = n + 2n \times \frac{13^{\log_{13}(n)} - 1}{13 - 1}$
+
+Drop low order terms and constants:
+
+$T(n)$ is $\Theta(n \log_{13}(n))$
 
