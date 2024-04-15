@@ -83,3 +83,9 @@ $$ T(n) =
     \end{cases}
 $$
 
+Input decreases by 13 every time we recurse. Work done outside of recursion is 2n.
+
+Total work done is the sum of the work done at each level of recursion. Lets express this:
+
+$T(n) = 2n + 2 \times \frac{n}{13} + 2 \times \frac{n}{13^2} + \ldots + 2 \times \frac{n}{13^{\log_{13}(n)}}$
+
